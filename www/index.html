@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>My App</title>
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/iconfont/material-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <div class="list-block media-list">
+              <ul>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-media text-center"><img src="img/200x200.png" width="80" style="border-radius: 90px"></div>
+                  </a>
+                </li>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">My Profile</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">Edit Profile</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">Product Listing</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="item-link item-content">
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">About</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    <div class="views">
+        <div class="view view-main">
+            <!-- <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center sliding">Awesome App</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div> -->
+            <div class="pages navbar-through toolbar-through">
+                <div data-page="index" class="page">
+                    <div class="page-content">
+                        <div class="list-block inset">
+                          <ul>
+                            <li>
+                              <div class="item-content text-center">
+                                  <h3>App Name</h3>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="item-content">
+                                <div class="item-media"><i class="material-icons">email</i></div>
+                                <div class="item-inner">
+                                  <div class="item-input">
+                                    <input type="email" placeholder="username" id="login_username">
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="item-content">
+                                <div class="item-media"><i class="material-icons">lock_outline</i></div>
+                                <div class="item-inner">
+                                  <div class="item-input">
+                                    <input type="password" placeholder="password" id="login_password">
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="item-content text-center">
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <p class="buttons-row">
+                          <a href="#" class="button button-raised login_button" onclick="login()">Sign In</a>
+                        </p>
+                        <p class="buttons-row">
+                          <a href="sign_up.html" class="button button-raised">Sign Up</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a href="#" class="link">Link 1</a>
+                    <a href="#" class="link">Link 2</a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
