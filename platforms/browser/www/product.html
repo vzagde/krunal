@@ -30,11 +30,49 @@
         </div>
         <div class="popup popup-purchase">
           <div class="content-block">
-            <p>Product Purchase Confirmation</p>
+            <h4>Product Purchase Confirmation</h4>
             <p>Product Details : </p>
-            <p>Product Name :</p>
-            <p>Product Quantity :</p>
-            <p>Please Confirm to Purchase Selected Product.</p>
+            <div class="list-block">
+              <ul>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <label>Product Name</label>
+                      <div class="item-input">
+                        <input type="text" placeholder="username" id="product_id" readonly="">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <label>Product Name</label>
+                      <div class="item-input">
+                        <input type="text" placeholder="username" id="product_name" readonly="">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <label>Product Quantity <span class="quantity_count">0</span></label>
+                  </div>
+                </li>
+                <li>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <div class="range-slider">
+                          <input type="range" min="0" max="10" step="1" id="product_quantity" oninput="showQuantity(this.value)" onchange="showQuantity(this.value)" class="range-slider" value="0">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
             <p class="buttons-row">
               <a href="#" class="button button-fill close-popup color-green">CONFIRM</a>
               <a href="#" class="button button-fill close-popup color-red">CANCEL</a>

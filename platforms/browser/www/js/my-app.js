@@ -22,6 +22,8 @@ myApp.onPageInit('product_list', function (page) {
 })
 
 myApp.onPageInit('product', function (page) {
+	var product_id = page.query.product_id;
+	console.log(product_id);
 })
 
 $$(document).on('pageInit', function (e) {

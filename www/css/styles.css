@@ -42,3 +42,30 @@ input, textarea{
 	background-size: cover;
 	background-position: center;
 }
+
+
+.buttons-row .button:first-child:last-child{
+    background: #1a1a1a;
+    border: #1a1a1a;
+    outline: none;
+    color: #fff;
+    border-radius: 0px;
+    height: 50px;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.button.button-fill.color-green, .button.button-fill.color-red{
+    height: 50px;
+    padding: 10px;
+}
+
+.popup-overlay{z-index: 111 !important;}
+
+.range-slider input[type="range"]::-webkit-slider-thumb { 
+    border: 1px solid silver;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
