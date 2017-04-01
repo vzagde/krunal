@@ -1,4 +1,3 @@
-var base_url = 'http://kreaserv-tech.com/asset-pie/index.php/krunal_api/';
 function login(){
     if (!$("#login_username").val() && $("#login_password").val()) {
         myApp.alert('Please enter username and password to proceed.');
@@ -13,6 +12,7 @@ function login(){
         }).done(function(res){
             console.log(res);
             if (res.status == 'success') {
+                $(".profile_id").attr('data-userid', res.response.id);
                 mainView.router.load({
                     url: 'product_list.html',
                     ignoreCache: false,
@@ -42,6 +42,7 @@ function register(){
         }).done(function(res){
             console.log(res);
             if (res.status == 'success') {
+                $(".profile_id").attr('data-userid', res.response.id);
                 mainView.router.load({
                     url: 'product_list.html',
                     ignoreCache: false,
@@ -74,4 +75,31 @@ function load_product(id){
 function showQuantity(value) {
     console.log(value);
     $(".quantity_count").html(value);
+}
+
+function purchase_product(){
+    var quantity = Number($(".quantity_count").text());
+    var userid = $(".profile_id").data('userid');
+    if (!quantity > 0) {
+        myApp.alert('Please enter quantity.');
+    } else {
+        $.ajax({
+            url: base_url+'purchase',
+            type: 'POST',
+            crossDomain: true,
+            data: {
+                user_id: userid, product_id: $("#product_id").val(), product_quantity: quantity,
+            }
+        }).done(function(res){
+            console.log(res);
+            if (res.status == 'success') {
+                myApp.alert('We have successfully received your Purchase Order Your Purchase Order Number is : '+res.data.order_no+'. We will connect you soon.');
+                myApp.closeModal('.popup-purchase');
+            } else if (res.status == 'failed') {
+                myApp.alert(res.msg);
+            }
+        }).error(function(){
+            myApp.alert('I think you loose your Internet connection, Get connected and again later.');
+        })
+    }
 }
